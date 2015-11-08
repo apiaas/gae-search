@@ -32,7 +32,7 @@ gae = os.path.dirname(appcfg_path)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 extra_pth = {
     'gae': gae,
-    'django': os.path.join(gae, 'lib', 'Djanog-1.5'),
+    'django': os.path.join(gae, 'lib', 'django-1.5'),
     'project-src': os.path.join(current_dir, 'src'),
     'project-lib': os.path.join(current_dir, 'src', 'lib'),
 }
