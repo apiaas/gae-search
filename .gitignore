@@ -2,3 +2,5 @@
 /datastore
 *.pyc
 /.idea
+/env
+/.env
