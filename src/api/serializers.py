@@ -1,6 +1,9 @@
 from rest_framework import serializers
+
 from util.rest import fields
+
 from .models import Endpoint
+
 
 class EndpointSerializer(serializers.Serializer):
     path = fields.PathField(

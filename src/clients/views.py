@@ -1,13 +1,16 @@
 from collections import OrderedDict
+
 from google.appengine.api import users
 from django.contrib.auth import login, logout
 from rest_framework import generics, status, views
 from rest_framework.reverse import reverse
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
+
 from util.rest.mixins import DataStoreMixin, BaseMixin
 from tokens.models import Token
 from tokens.permissions import roles
+
 from .models import User
 from .serializers import UserSerializer, AuthViaEmailSerializer
 from .permissions import IsGAEOrSuperAdmin
@@ -18,6 +21,7 @@ class UserView(DataStoreMixin, generics.GenericAPIView):
     model = User
     serializer_class = UserSerializer
     queryset = User.query()
+
 
 class UserList(UserView, generics.ListCreateAPIView):
     pass

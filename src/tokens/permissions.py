@@ -1,5 +1,7 @@
-from rest_framework.permissions import BasePermission
 from collections import namedtuple
+
+from rest_framework.permissions import BasePermission
+
 roles = namedtuple('Roles', 'create, delete, admin')(
     'create', 'delete', 'admin'
 )

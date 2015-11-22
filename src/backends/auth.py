@@ -15,4 +15,3 @@ class ModelBackend(object):
     def get_user(self, user_id):
         result = User.get_by_id(user_id)
         return result
-

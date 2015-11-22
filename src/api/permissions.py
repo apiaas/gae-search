@@ -1,4 +1,5 @@
 from rest_framework.permissions import BasePermission, SAFE_METHODS
+
 from tokens.permissions import roles
 
 CREATE_METHODS = ('POST', )
