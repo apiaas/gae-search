@@ -3,7 +3,6 @@ from datetime import datetime
 from google.appengine.ext import ndb
 from django.utils.translation import ugettext_lazy as _
 from django.utils import six
-
 from rest_framework import serializers
 
 
@@ -95,6 +94,7 @@ class CharOrMethodField(serializers.CharField):
             )
         attr = getattr(self.parent, self.method_name)(instance)
         return attr
+
 
 # http://stackoverflow.com/questions/19375753/django-rest-framework-updating-time-using-epoch-time
 class UnixEpochDateField(serializers.IntegerField):

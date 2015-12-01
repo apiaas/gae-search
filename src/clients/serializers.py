@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from .models import User
+
 from util.rest import fields
+from .models import User
 
 
 class UserSerializer(serializers.Serializer):
@@ -37,7 +38,6 @@ class UserSerializer(serializers.Serializer):
         return instance
 
 
-
 class AuthViaEmailSerializer(serializers.Serializer):
     email = serializers.CharField(max_length=500, min_length=3)
     password = serializers.CharField(
@@ -64,4 +64,3 @@ class AuthViaEmailSerializer(serializers.Serializer):
 
         attrs['user'] = user
         return attrs
-

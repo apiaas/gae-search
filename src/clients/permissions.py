@@ -16,4 +16,3 @@ class IsGAEOrSuperAdmin(BasePermission):
 
         if IsSuperAdmin().has_permission(request, view):
             return True
-

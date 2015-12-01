@@ -1,5 +1,7 @@
 from rest_framework import serializers
+
 from util.rest import fields
+
 from .models import Token
 from .permissions import roles
 

@@ -1,5 +1,6 @@
 import uuid
 from collections import OrderedDict
+
 from google.appengine.ext import ndb
 from google.appengine.api import search
 from django.http import Http404
@@ -7,6 +8,7 @@ from rest_framework import generics, views, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.utils.urls import replace_query_param
+
 from util.rest.mixins import DataStoreMixin, BaseMixin
 from .models import Endpoint
 from .serializers import EndpointSerializer
@@ -72,6 +74,7 @@ class SearchDocs(object):
 
 search_docs = SearchDocs()
 
+
 def search_to_representation(value):
     if isinstance(value, search.GeoPoint):
         return 'geopoint(lat={}, long={})'.format(
@@ -79,6 +82,7 @@ def search_to_representation(value):
         )
 
     return value
+
 
 class ApplicationEndpoint(BaseMixin, views.APIView):
 

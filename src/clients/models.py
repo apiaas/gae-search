@@ -1,4 +1,5 @@
 from google.appengine.ext import ndb
+
 from util.models import BaseUser
 
 

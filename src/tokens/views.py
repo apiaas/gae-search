@@ -1,5 +1,7 @@
 from rest_framework import generics
+
 from util.rest.mixins import DataStoreMixin, BaseMixin
+
 from .models import Token
 from .serializers import TokenSerializer
 
