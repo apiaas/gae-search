@@ -4,4 +4,4 @@
 # in `lib/` subdirectory.
 #
 # Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
-djangorestframework == 3.2
+djangorestframework == 3.2.5
